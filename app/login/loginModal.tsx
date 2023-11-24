@@ -7,7 +7,9 @@
   crossOrigin="anonymous"
 />*/
 }
+
 import React from "react";
+import Link from "next/link";
 import { PersonBoundingBox, HouseExclamationFill } from "react-bootstrap-icons";
 import SignUpButtton from "./signuppage/signupbutton";
 import "../globals.css";
@@ -28,7 +30,10 @@ function LoginModal() {
           PASSWORD{" "}
           <input className="sign-up" type="password" placeholder="password" />
         </div>
-        <button className="btn btn-primary">Login</button>
+        <Link href="homepage">
+          <button className="btn btn-primary">Login</button>
+        </Link>
+
         <div>
           <div>or</div>
           <SignUpButtton />
