@@ -163,6 +163,7 @@ img.sign-in-img {
 .sign-up-modal {
   position: absolute;
   display: flex;
+  overflow: auto;
   flex-direction: column;
   justify-content: center;
   border: 3px solid rgb(12, 59, 89);
@@ -170,7 +171,6 @@ img.sign-in-img {
   height: 40%;
   width: 30%;
   padding: 2rem;
-  float: right;
   border-radius: 6px;
   margin-top: 4rem;
   margin-left: 1rem;

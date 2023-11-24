@@ -186,3 +186,8 @@ react
     Build the application for deployment by building a production-ready package.
     Host your backend server and deploy your React app to a hosting provider.
     Register your app in the respective app stores if you plan to publish it as a mobile app.
+
+remeber :
+
+1. design the logo
+2. forget abt design ,work on the functionality first
