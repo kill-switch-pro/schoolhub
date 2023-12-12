@@ -21,6 +21,10 @@ export default function Mehim(){
   }
 }
 
+* {
+  color: #000;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
 }
@@ -176,14 +180,18 @@ img.sign-in-img {
   margin-left: 1rem;
 }
 
+.signup-h2 {
+  background: #000;
+}
+
 /*
 function me(){
   return <p>hello</p>;
 }
 
 export default me;
-
 */
+
 /* Default CSS layout for narrow screens */
 
 @media (min-width: 480px) {

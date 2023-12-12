@@ -105,8 +105,6 @@ project will contain :
 
 3. make it functionality like whatsapp , data anarchy
 
-4) make it like slack you enter group based on location
-
 5) make it like twitter where every tweet is a tweet of a tweet
 
 dont collect user data ( data privacy )
@@ -191,8 +189,3 @@ remeber :
 
 1. design the logo
 2. forget abt design ,work on the functionality first
-   uisgd
-   rfdty
-   tyfyt
-   uguik
-   uitgu
