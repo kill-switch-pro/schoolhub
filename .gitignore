@@ -7,7 +7,8 @@
 
 # testing
 /coverage
-/todo
+todo
+documentation
 
 # next.js
 /.next/
