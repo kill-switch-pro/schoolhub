@@ -11,6 +11,25 @@ interface Post {
   // Add other properties as needed
 }
 
+// YourComponent.js
+import { useState } from "react";
+
+const filterFunction = () => {
+  const input = document.getElementById("myInput") as HTML;
+  const filterValue = input.value.toUpperCase();
+  const dropdown = document.getElementById("feed-container");
+  const links = dropdown.getElementsByTagName("h2");
+
+  for (let i = 0; i < links.length; i++) {
+    const textContent = links[i].textContent || links[i].innerText;
+    if (textContent.toUpperCase().indexOf(filterValue) > -1) {
+      links[i].style.display = "";
+    } else {
+      links[i].style.display = "none";
+    }
+  }
+};
+
 //const page = () => {
 let page = 1;
 const content = () => {
@@ -56,24 +75,9 @@ const content = () => {
 
 const timeoutId = setTimeout(() => {
   content();
-}, 2000);
+}, 1500);
 
 //};
-/*
-const filter = () => {
-  const input = document.getElementById("myInput");
-  const filter = input.value.toUpperCase();
-  const div = document.getElementById("myDropdown");
-  const aTag = div.getElementsByTagName("a");
-  for (i = 0; i < aTag.length; i++) {
-    txtValue = aTag[i].textContent || aTag[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-};*/
 
 //window.addEventListener("load", page);
 
@@ -90,6 +94,7 @@ function Home() {
             placeholder="search for institution"
             aria-label="search for institution"
             aria-describedby="basic-addon2"
+            onKeyUp={filterFunction}
           />
           <div className="input-group-append">
             <span className="input-group-text" id="basic-addon2">
