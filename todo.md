@@ -191,3 +191,93 @@ remeber :
 2. forget abt design ,work on the functionality first
 
 testion
+
+this is the infinite scroll tamplate:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Scroll Content Feed</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #feed-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-container {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+
+    .post-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .post-container p {
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="feed-container"></div>
+
+<script>
+  const feedContainer = document.getElementById('feed-container');
+  let page = 1;
+
+  const fetchNewContent = async () => {
+    try {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`);
+      const data = await response.json();
+
+      if (data.length > 0) {
+        data.forEach(post => {
+          const postContainer = document.createElement('div');
+          postContainer.className = 'post-container';
+          postContainer.innerHTML = `
+            <h2>${post.title}</h2>
+            <p>${post.body}</p>
+          `;
+
+          feedContainer.appendChild(postContainer);
+        });
+
+        page++;
+      }
+    } catch (error) {
+      console.error('Error fetching new content:', error);
+    }
+  };
+
+  // Initial fetch
+  fetchNewContent();
+
+  // Infinite scroll
+  window.addEventListener('scroll', () => {
+    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 10) {
+      fetchNewContent();
+    }
+  });
+</script>
+
+</body>
+</html>
