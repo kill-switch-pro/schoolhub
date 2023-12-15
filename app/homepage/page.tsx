@@ -12,44 +12,52 @@ interface Post {
 }
 
 //const page = () => {
-const feedContainer = document.getElementById("feed-container") as HTMLElement;
 let page = 1;
+const content = () => {
+  const fetchNewContent = async () => {
+    try {
+      const response = await fetch(
+        `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`
+      );
+      const data = await response.json();
+      const feedContainer = document.getElementById(
+        "feed-container"
+      ) as HTMLElement;
 
-const fetchNewContent = async () => {
-  try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`
-    );
-    const data = await response.json();
-
-    if (data.length > 0) {
-      data.forEach((post: Post) => {
-        const postContainer = document.createElement("div");
-        postContainer.className = "post-container";
-        postContainer.innerHTML = `
+      if (data.length > 0) {
+        data.forEach((post: Post) => {
+          const postContainer = document.createElement("div");
+          postContainer.className = "post-container";
+          postContainer.innerHTML = `
             <h2>${post.title}</h2>
             <p>${post.body}</p>
             `;
 
-        feedContainer.appendChild(postContainer);
-      });
+          feedContainer.appendChild(postContainer);
+        });
 
-      page++;
+        page++;
+      }
+    } catch (error) {
+      console.error("Error fetching new content:", error);
     }
-  } catch (error) {
-    console.error("Error fetching new content:", error);
-  }
+  };
+
+  // Initial fetch
+  fetchNewContent();
+  // Infinite scroll
+  window.addEventListener("scroll", () => {
+    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 10) {
+      fetchNewContent();
+    }
+  });
 };
 
-// Initial fetch
-fetchNewContent();
-// Infinite scroll
-window.addEventListener("scroll", () => {
-  const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-  if (scrollTop + clientHeight >= scrollHeight - 10) {
-    fetchNewContent();
-  }
-});
+const timeoutId = setTimeout(() => {
+  content();
+}, 2000);
+
 //};
 /*
 const filter = () => {
@@ -89,7 +97,7 @@ function Home() {
             </span>
           </div>
         </div>
-        <div id="feed-container myDropdown"></div>
+        <div id="feed-container"></div>
       </div>
     </>
   );
