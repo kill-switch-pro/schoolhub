@@ -51,6 +51,21 @@ window.addEventListener("scroll", () => {
   }
 });
 //};
+/*
+const filter = () => {
+  const input = document.getElementById("myInput");
+  const filter = input.value.toUpperCase();
+  const div = document.getElementById("myDropdown");
+  const aTag = div.getElementsByTagName("a");
+  for (i = 0; i < aTag.length; i++) {
+    txtValue = aTag[i].textContent || aTag[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+};*/
 
 //window.addEventListener("load", page);
 
@@ -62,6 +77,7 @@ function Home() {
         <div className="input-group mb-3">
           <input
             type="text"
+            id="myInput"
             className="form-control"
             placeholder="search for institution"
             aria-label="search for institution"
@@ -73,7 +89,7 @@ function Home() {
             </span>
           </div>
         </div>
-        <div id="feed-container"></div>
+        <div id="feed-container myDropdown"></div>
       </div>
     </>
   );
