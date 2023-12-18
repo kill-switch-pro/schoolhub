@@ -11,7 +11,7 @@
 import React from "react";
 import Link from "next/link";
 import { PersonBoundingBox, HouseExclamationFill } from "react-bootstrap-icons";
-import SignUpButtton from "./signuppage/signupbutton";
+
 import "../globals.css";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.css";
@@ -36,7 +36,13 @@ function LoginModal() {
 
         <div>
           <div>or</div>
-          <SignUpButtton />
+          <div>
+            no account ?
+            <Link href="login/signuppage" target="_blank">
+              <button className="btn btn-primary">signup</button>
+            </Link>
+          </div>
+          {/*  <SignUpButtton />*/}
         </div>
       </div>
     </>

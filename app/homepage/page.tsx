@@ -3,7 +3,8 @@
 import React from "react";
 import "../styles/homepage.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Search } from "react-bootstrap-icons";
+import { Google, Search } from "react-bootstrap-icons";
+import Link from "next/link";
 
 interface Post {
   title: string;
@@ -11,32 +12,31 @@ interface Post {
   // Add other properties as needed
 }
 
-// YourComponent.js
-import { useState } from "react";
-
+///this is for the search filter
 const filterFunction = () => {
   const input = document.getElementById("myInput") as HTML;
   const filterValue = input.value.toUpperCase();
   const dropdown = document.getElementById("feed-container");
-  const links = dropdown.getElementsByTagName("h2");
+  const headerContent = dropdown.getElementsByTagName("h2");
 
-  for (let i = 0; i < links.length; i++) {
-    const textContent = links[i].textContent || links[i].innerText;
+  for (let i = 0; i < headerContent.length; i++) {
+    const textContent =
+      headerContent[i].textContent || headerContent[i].innerText;
     if (textContent.toUpperCase().indexOf(filterValue) > -1) {
-      links[i].style.display = "";
+      headerContent[i].style.display = "";
     } else {
-      links[i].style.display = "none";
+      headerContent[i].style.display = "none";
     }
   }
 };
 
-//const page = () => {
+//this is for api call post
 let page = 1;
 const content = () => {
   const fetchNewContent = async () => {
     try {
       const response = await fetch(
-        `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=5`
+        `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=7`
       );
       const data = await response.json();
       const feedContainer = document.getElementById(
@@ -48,13 +48,16 @@ const content = () => {
           const postContainer = document.createElement("div");
           postContainer.className = "post-container";
           postContainer.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.body}</p>
+          <a href={item.link}>
+        <h2>${post.title}</h2>
+          </a>
+          
+          <p>${post.body}</p>
+           
             `;
 
           feedContainer.appendChild(postContainer);
         });
-
         page++;
       }
     } catch (error) {
@@ -75,7 +78,7 @@ const content = () => {
 
 const timeoutId = setTimeout(() => {
   content();
-}, 1500);
+}, 1000);
 
 //};
 
