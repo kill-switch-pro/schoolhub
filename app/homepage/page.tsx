@@ -1,5 +1,19 @@
-// this is the home page for the website
 "use client";
+// this is the home page for the website
+
+{
+  /*
+***************************************************
+***************************************************
+
+with God nothing shall be imposible 
+
+***************************************************
+***************************************************
+***************************************************
+
+*/
+}
 import React from "react";
 import "../styles/homepage.css";
 import "bootstrap/dist/css/bootstrap.css";
