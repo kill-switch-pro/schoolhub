@@ -3,3 +3,50 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.signup-input {
+  display: flex;
+  font-size: 50px;
+}
+
+/* Basic styling for the input and placeholder */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px outset black;
+  border-top: none;
+  border-left: none;
+
+  border-right: none;
+  margin-left: 10px;
+}
+
+.placeholder-text {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-40%);
+  font-size: 20px;
+  transition: font-size 0.3s ease, top 0.3s ease;
+  margin-left: 3.8rem;
+  pointer-events: none;
+  color: #7a7878;
+}
+
+/* Hover effect */
+.input-field:hover + .placeholder-text,
+.input-field:focus + .placeholder-text {
+  font-size: 15px;
+  margin-left: 2.5rem;
+  top: 0;
+  color: #141414;
+}
+
+input {
+  font-size: 40px;
+}

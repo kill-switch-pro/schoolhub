@@ -19,6 +19,8 @@ import "../styles/homepage.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Google, Search } from "react-bootstrap-icons";
 import Link from "next/link";
+import RootLayout from "../layout";
+import { Console } from "console";
 
 interface Post {
   title: string;
@@ -52,6 +54,8 @@ const content = () => {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=7`
       );
+      const info = await fetch(".../dummyJson/link.json");
+      //    const datame = await info.json();
       const data = await response.json();
       const feedContainer = document.getElementById(
         "feed-container"
@@ -71,6 +75,7 @@ const content = () => {
             `;
 
           feedContainer.appendChild(postContainer);
+          //     document.getElementById("me").innerHTML = datame;
         });
         page++;
       }
@@ -119,6 +124,7 @@ function Home() {
             </span>
           </div>
         </div>
+        {/* <h3 id="me"></h3>*/}
         <div id="feed-container"></div>
       </div>
     </>
