@@ -1,7 +1,8 @@
-.sing-up-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.signup-page {
+  background-image: linear-gradient(to right, #cce4f3, #98bffe);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .signup-input {
@@ -49,4 +50,12 @@
 
 input {
   font-size: 40px;
+}
+
+.me {
+  border: 3px solid black;
+}
+
+.card-body {
+  box-shadow: 2px 3px 7px 2px;
 }
