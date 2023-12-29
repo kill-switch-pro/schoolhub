@@ -47,6 +47,10 @@ body {
   pointer-events: none;
 }
 
+.landing-page {
+  background-image: url("");
+}
+
 .side-navigation {
   margin-left: 20px;
   font-size: small;
@@ -113,6 +117,7 @@ input.sign-up::placeholder {
 .heading-four {
   font-size: 4rem;
   color: 0f0e0f;
+  opacity: 0.6;
 }
 
 ::-webkit-scrollbar {
@@ -192,6 +197,10 @@ img.sign-in-img {
 
 .signup-h2 {
   background: #000;
+}
+
+.card-id {
+  background-image: url("");
 }
 
 /*
