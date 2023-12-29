@@ -15,7 +15,7 @@ with God nothing shall be imposible
 */
 }
 import React from "react";
-import "../styles/homepage.css";
+import ".//homepage.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Google, Search } from "react-bootstrap-icons";
 import Link from "next/link";

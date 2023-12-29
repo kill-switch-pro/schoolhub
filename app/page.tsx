@@ -3,15 +3,40 @@ import LoginPage from "./login/page";
 //import ".../globals.css";
 //import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Login from "./login/loginModal";
-import "./login/signuppage/signuppage.css";
+import "./login/signuppage.css";
 import "./globals.css";
 import { Envelope, Key, Lock, Person } from "react-bootstrap-icons";
-//import Image from "next/image";
-import "./login/signuppage/signuppage.css";
+import Link from "next/link";
+//import Link from "next/link";
+
 export default function LandingPage() {
   return (
     <>
+      {/*
+    <div className="sign-up-modal card-body">
+        <h2>SIGN IN</h2>
+
+        <div>
+          COLLEGE EMAIL{" "}
+          <input className="sign-up" type="text" placeholder="email .edu " />
+        </div>
+
+        <Link href="homepage">
+          <button className="btn btn-primary">Login</button>
+        </Link>
+
+        <div>
+          <div>or</div>
+          <div>
+            no account ?
+            <Link href="login/signuppage" target="_blank">
+              <button className="btn btn-primary">signup</button>
+            </Link>
+          </div>
+          
+        </div>
+      </div> 
+      */}
       <div className="landing-page">
         <div className="signup-page">
           <section className="vh-100">
@@ -22,7 +47,7 @@ export default function LandingPage() {
                     <div className="row justify-content-center">
                       <div className="card-id col-md-100 col-lg-6 col-xl-5 order-2 order-lg-1">
                         <p className="text-center h1 fw-bold mb-3 mx-1 mx-md-40 mt-3">
-                          Login up
+                          Log-in
                         </p>
 
                         <form className="mx-1 mx-md-4">
@@ -53,15 +78,26 @@ export default function LandingPage() {
                             </div>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="button" className="btn btn-primary ">
-                              login
-                            </button>
+                            <Link href={"homepage/"}>
+                              <button
+                                type="button"
+                                className="btn btn-primary "
+                              >
+                                login
+                              </button>
+                            </Link>
                           </div>
                           <div className="h4 mx-4">or</div>
+
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="button" className="btn btn-primary ">
-                              sign up
-                            </button>
+                            <Link href={"login/"}>
+                              <button
+                                type="button"
+                                className="btn btn-primary "
+                              >
+                                sign up
+                              </button>
+                            </Link>
                           </div>
                         </form>
                       </div>
