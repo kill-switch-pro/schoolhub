@@ -15,7 +15,7 @@ function LoginPage() {
         <div className="slogan">
           <div>THE</div>
           <div>INTERNET</div>
-          <div className="">HOME FOR</div>
+          <div className="h1">HOME FOR</div>
           <div className="h9 heading-four"> STUDENT </div>
         </div>
       </div>
