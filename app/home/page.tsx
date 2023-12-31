@@ -11,7 +11,6 @@ import {
 import { time } from "console";
 import { title } from "process";
 import Link from "next/link";
-import "bootstrap/dist/css/bootstrap.css";
 
 const Navigation = [
   {
@@ -27,7 +26,7 @@ const Navigation = [
     icon: Chat,
   },
   {
-    title: "settinigs",
+    title: "setting",
     icon: Gear,
   },
 ];
