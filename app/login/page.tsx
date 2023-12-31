@@ -6,20 +6,21 @@ import "../globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./signuppage.css";
 import { Envelope, Key, Lock, Person } from "react-bootstrap-icons";
+import Link from "next/link";
 
 const SignUpPage = () => {
   return (
     <>
-      <div className="signup-page">
-        <section className="vh-100">
-          <div className="container h-100">
+      <div className="signup-page bg-danger">
+        <section>
+          <div className="container h-100 ">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col-lg-12 col-xl-11">
                 <div className="card text-black ">
-                  <div className="card-body p-md-5 ">
+                  <div className="card-body p-md-2">
                     <div className="row justify-content-center">
                       <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                        <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-9">
+                        <p className=" text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-1">
                           Sign up
                         </p>
 
@@ -67,8 +68,7 @@ const SignUpPage = () => {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
-                            <div className="form-outline flex-fill mb-0 signup-input input-container">
+                            <div className="form-outline flex-fill mb-1 signup-input input-container">
                               <Lock />
                               <input
                                 type="password"
@@ -81,9 +81,8 @@ const SignUpPage = () => {
                             </div>
                           </div>
 
-                          <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-key fa-lg me-3 fa-fw"></i>
-                            <div className="form-outline flex-fill mb-0 signup-input input-container">
+                          <div className="d-flex flex-row align-items-center mb-1">
+                            <div className="form-outline flex-fill signup-input input-container">
                               <Key />
                               <input
                                 type="password"
@@ -99,7 +98,7 @@ const SignUpPage = () => {
                             </div>
                           </div>
 
-                          <div className="form-check d-flex justify-content-center mb-5">
+                          <div className="form-check d-flex justify-content-center mb-2">
                             <input
                               className="form-check-input me-2"
                               type="checkbox"
@@ -112,10 +111,15 @@ const SignUpPage = () => {
                             </label>
                           </div>
 
-                          <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-10">
-                            <button type="button" className="btn btn-primary ">
-                              Register
-                            </button>
+                          <div className="d-flex justify-content-center mx-4 mb-1 mb-lg-10">
+                            <Link href={"/channel"}>
+                              <button
+                                type="button"
+                                className="btn btn-primary "
+                              >
+                                Register
+                              </button>
+                            </Link>
                           </div>
                         </form>
                       </div>

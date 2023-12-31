@@ -1,5 +1,5 @@
 "use client";
-// this is the home page for the website
+// this is the ChannelPage page for the website
 
 {
   /*
@@ -15,7 +15,7 @@ with God nothing shall be imposible
 */
 }
 import React from "react";
-import ".//homepage.css";
+import "./channelpage.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Google, Search } from "react-bootstrap-icons";
 import Link from "next/link";
@@ -103,11 +103,11 @@ const timeoutId = setTimeout(() => {
 
 //window.addEventListener("load", page);
 
-//const Home = async () => {
-function Home() {
+//const ChannelPage = async () => {
+function ChannelPage() {
   return (
     <>
-      <div className="homePageBody">
+      <div className="ChannelPagePageBody">
         <div className="input-group mb-3">
           <input
             type="text"
@@ -131,4 +131,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ChannelPage;
