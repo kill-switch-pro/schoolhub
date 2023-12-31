@@ -78,7 +78,7 @@ export default function LandingPage() {
                             </div>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <Link href={"void"}>
+                            <Link href={"home/"}>
                               <button
                                 type="button"
                                 className="btn btn-primary "

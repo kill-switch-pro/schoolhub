@@ -11,7 +11,7 @@ import Link from "next/link";
 const SignUpPage = () => {
   return (
     <>
-      <div className="signup-page bg-danger">
+      <div className="signup-page h-full bg-blue-200">
         <section>
           <div className="container h-100 ">
             <div className="row d-flex justify-content-center align-items-center h-100">
