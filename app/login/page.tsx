@@ -11,10 +11,10 @@ import Link from "next/link";
 const SignUpPage = () => {
   return (
     <>
-      <div className="signup-page h-full bg-blue-200">
+      <div className="bg-red-200 signup-page h-full ">
         <section>
           <div className="container h-100 ">
-            <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="row flex justify-center align-items-center h-100">
               <div className="col-lg-12 col-xl-11">
                 <div className="card text-black ">
                   <div className="card-body p-md-2">

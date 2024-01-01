@@ -10,9 +10,9 @@ import {
   Magnet,
   Search,
 } from "react-bootstrap-icons";
-import { time } from "console";
-import { title } from "process";
+import { FaBell } from "react-icons/fa";
 import Link from "next/link";
+import "./home.css";
 //import "bootstrap/dist/css/bootstrap.css";
 
 const Navigation = [
@@ -30,36 +30,40 @@ const Navigation = [
   },
   {
     title: "setting",
-    icon: Gear,
+    icon: FaBell,
   },
 ];
 
 function Home() {
   return (
     <>
-      <div className="w-full h-auto flex justify-center relative bg-black">
-        <div className="max-w-screen-lg w-full h-full flex relative">
+      <div className="bg-black h-screen flex justify-center items-center relative ">
+        <div className="max-w-screen-xl text-white w-full h-full flex relative">
           {/*left side bar for navigation*/}
-          <section className="fixed w-72 flex flex-col h-screen">
-            <Link href={"/"} className="my-4">
-              <Magnet size={25} />
+          <section className="fixed w-72 flex flex-col h-screen space-y-4 my-4">
+            <Link href={"/"} className="p-2 text-2xl">
+              <Magnet />
             </Link>
             {Navigation.map((item) => (
               <Link
-                className="bg-white/50 flex items-center justify-center space-x-2 rounded-3xl p-4"
+                className="hover:bg-white/50 transition duration-200 rounded-3xl flex items-center justify-center space-x-2  p-4"
                 href={`/${item.title.toLowerCase()}`}
                 key={item.title}
               >
                 <div>
-                  <item.icon size={30} />
+                  <item.icon />
                 </div>
                 {item.title !== "schoolhub" && <div>{item.title}</div>}
               </Link>
             ))}
-            <button className="rounded m-4 bg-red-700 p-4 text-center">
+            <button className="rounded bg-blue-500 m-4 p-2 text-center">
               post
             </button>
           </section>
+          {/*
+          <main>main body</main>
+          <section>left view</section>
+           */}
         </div>
       </div>
     </>

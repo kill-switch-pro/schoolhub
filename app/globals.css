@@ -26,10 +26,6 @@ with God nothing shall be impossible
   }
 }
 
-* {
-  color: #000;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
 }
@@ -42,10 +38,6 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-.landing-page {
-  background-image: url("");
 }
 
 .side-navigation {
@@ -68,7 +60,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(rgb(97, 186, 218), #0c3b59);
+  /*  background-image: linear-gradient(rgb(97, 186, 218), #0c3b59);*/
   position: absolute;
   font-family: "Courier New", Courier, monospace, Impact, Haettenschweiler,
     "Arial Narrow Bold", sans-serif, "Arial Narrow";

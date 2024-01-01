@@ -1,5 +1,4 @@
 import React from "react";
-import LoginPage from "./login/page";
 //import ".../globals.css";
 //import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -37,11 +36,11 @@ export default function LandingPage() {
         </div>
       </div> 
       */}
-      <div className="landing-page">
+      <div className="landing-page bg-blue-200">
         <div className="signup-page">
           <section className="vh-100">
             <div className="container h-100">
-              <div className="row flex justify-content-center align-items-center h-100">
+              <div className="flex row justify-center items-center h-100">
                 <div className="col-lg-12 col-xl-11">
                   <div className="card text-black ">
                     <div className="row justify-content-center">
