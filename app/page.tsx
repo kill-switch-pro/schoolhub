@@ -36,7 +36,7 @@ export default function LandingPage() {
         </div>
       </div> 
       */}
-      <div className="landing-page bg-blue-200">
+      <div className="landing-page bg-primary">
         <div className="signup-page">
           <section className="vh-100">
             <div className="container h-100">

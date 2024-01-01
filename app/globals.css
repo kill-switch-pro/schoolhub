@@ -77,14 +77,14 @@ input[type="password"] {
   margin-top: 9px;
   margin-left: 3rem;
 }
-
+/*
 button {
   border: 2px solid rgb(168, 167, 167);
   outline: none;
   border-radius: 6px;
   width: 6rem;
   background: transparent;
-}
+}*/
 
 * {
   margin: 0;
