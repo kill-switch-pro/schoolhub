@@ -19,9 +19,14 @@ import {
 import { FaBell } from "react-icons/fa";
 import Link from "next/link";
 import "./home.css";
+import Navigation from "../navigation/page";
 //import "bootstrap/dist/css/bootstrap.css";
-
+/*
 const Navigation = [
+  {
+    title: "schoolhub",
+    icon: BagCheck,
+  },
   {
     title: "home",
     icon: House,
@@ -47,50 +52,36 @@ const Navigation = [
     icon: Hash,
   },
 ];
-
+*/
 function Home() {
   return (
     <>
       <div className="bg-black h-screen flex justify-center items-center relative ">
         <div className="max-w-screen-xl text-white w-full h-full flex relative">
           {/*left side bar for navigation*/}
-          <section className="fixed w-[274] flex flex-col h-screen items-stretch space-y-4">
-            <div className="flex flex-col items-strech h-full space-y-4 mt-4">
-              <Link href={"/"} className="p-2 text-2xl">
-                <BagCheck />
-              </Link>
-              {Navigation.map((item) => (
-                <Link
-                  className="hover:bg-white/50 transition duration-200 rounded-3xl flex items-center justify-center space-x-1 mt-4 p-2"
-                  href={`/${item.title.toLowerCase()}`}
-                  key={item.title}
-                >
-                  <div>
-                    <item.icon size={20} />
-                  </div>
-                  {item.title !== "schoolhub" && <div>{item.title}</div>}
-                </Link>
-              ))}
-              <button className="rounded-full bg-primary text-2xl text-center hover:bg-opacity-90 mt-4 px-6 transition duration-200 ">
-                update
-              </button>
+          <Navigation />
+
+          <main className="ml-[275px]  p-6 flex w-[600px] min-h-screen  flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
+            <h1 className="text-xl font-bold my-4">Home</h1>
+            <div className="h-32 border-b-[0.5px] flex items-stretch py-4 space-x-2 border-t-[0.5px] border-gray-600 relative">
+              <div className="rounded-full bg-slate-400 w-10 h-10 flex-none"></div>
+              <div className="flex flex-col w-full h-full">
+                <input
+                  type="text"
+                  className="w-full h-full bg-transparent border-gray-600 p-4  outline-none border-none"
+                  placeholder="say what you feel..."
+                />
+              </div>
+              <div className="w-full justify-between items-center flex">
+                <div></div>
+                <div className="w-full max-w-[100px]">
+                  <button className="rounded-full font-bold bg-primary text-lg text-center hover:bg-opacity-90 px-4 py-2 w-full transition duration-200 ">
+                    update
+                  </button>
+                </div>
+              </div>
             </div>
-            <button className="rounded-full flex items-center space-x-2 bg-transparent m-4 text-2xl text-center hover:bg-opacity-70 transition duration-200 hover:white/20">
-              <div className="rounded-full bg-slate-400 w-8 h-8"></div>
-              <div className="text-left text-xs">
-                <div className="font-semibold text-sm">user Name</div>
-                <div className="text-xs">@userName</div>
-              </div>
-              <div>
-                <ThreeDots />
-              </div>
-            </button>
-            <div>at the bottom</div>
-          </section>
-          {/*
-          <main>main body</main>
-          <section>left view</section>
-        */}
+          </main>
         </div>
       </div>
     </>
