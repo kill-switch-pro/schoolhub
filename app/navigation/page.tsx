@@ -26,7 +26,7 @@ const Navigation_Item = [
     icon: BagCheck,
   },
   {
-    title: "Navigation",
+    title: "home",
     icon: House,
   },
   {

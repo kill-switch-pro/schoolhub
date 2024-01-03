@@ -20,7 +20,7 @@ import { FaBell } from "react-icons/fa";
 import Link from "next/link";
 import "./home.css";
 import Navigation from "../navigation/page";
-//import "bootstrap/dist/css/bootstrap.css";
+
 /*
 const Navigation = [
   {
