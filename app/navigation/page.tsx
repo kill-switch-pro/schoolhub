@@ -54,7 +54,7 @@ const Navigation_Item = [
 function Navigation() {
   return (
     <>
-      <div className="bg-black h-screen flex justify-center items-center relative ">
+      <div className="bg-black h-full flex justify-center items-center relative ">
         <div className="max-w-screen-xl text-white w-full h-full flex relative">
           {/*left side bar for navigation*/}
           <section className="fixed w-[275] flex flex-col h-screen items-stretch space-y-4">
