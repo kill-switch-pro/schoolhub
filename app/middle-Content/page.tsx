@@ -23,7 +23,7 @@ import {
 } from "react-bootstrap-icons";
 import { FaBell } from "react-icons/fa";
 import Link from "next/link";
-import Navigation from "../navigation/page";
+import Navigation from "../left-Navigation/page";
 
 function Home() {
   return (

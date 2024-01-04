@@ -2,7 +2,7 @@ import React from "react";
 //import ".../globals.css";
 //import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./login/signuppage.css";
+import "./signUp/signuppage.css";
 import "./globals.css";
 import { Envelope, Key, Lock, Person } from "react-bootstrap-icons";
 import Link from "next/link";
@@ -77,7 +77,7 @@ export default function LandingPage() {
                             </div>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <Link href={"home/"}>
+                            <Link href={"/content"}>
                               <button
                                 type="button"
                                 className="btn btn-primary "
@@ -89,7 +89,7 @@ export default function LandingPage() {
                           <div className="h4 mx-4">or</div>
 
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <Link href={"login/"}>
+                            <Link href={"signUp/"}>
                               <button
                                 type="button"
                                 className="btn btn-primary "
