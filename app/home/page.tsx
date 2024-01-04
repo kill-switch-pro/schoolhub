@@ -6,15 +6,19 @@ import {
   BagCheck,
   BagX,
   Chat,
+  ChatLeft,
   Dot,
   Gear,
   Google,
   Hash,
+  Heart,
   House,
   Lightbulb,
   Magnet,
   Search,
   SearchHeart,
+  Send,
+  Share,
   ThreeDots,
 } from "react-bootstrap-icons";
 import { FaBell } from "react-icons/fa";
@@ -29,6 +33,7 @@ function Home() {
           {/* navigation */}
           <Navigation />
 
+          {/*main content */}
           <main className="ml-[275px] flex w-[600px] min-h-screen h-full flex-col border-l-[0.5px] border-r-[0.5px] border-gray-600">
             <h1 className="text-xl font-bold p-2">Home</h1>
 
@@ -62,6 +67,7 @@ function Home() {
                   </div>
                   {/* post container */}
                   <div className="flex flex-col space-y-4">
+                    {/*account info username and name*/}
                     <div className="flex items-center space-x-1">
                       <div>web dev</div>
                       <div>@web</div>
@@ -81,11 +87,19 @@ function Home() {
 
                     <div className="bg-slate-400 aspect-square w-full h-96 rounded-xl"></div>
                     {/*activity icon , like, comment , repost, share */}
-                    <div className="flex items-center space-x-2 w-full">
-                      <div>C</div>
-                      <div>L</div>
-                      <div>R</div>
-                      <div>sh</div>
+                    <div className="flex items-center space-x-2 w-full ">
+                      <div>
+                        <ChatLeft />
+                      </div>
+                      <div>
+                        <Heart />
+                      </div>
+                      <div>
+                        <Send />
+                      </div>
+                      <div>
+                        <Share />
+                      </div>
                     </div>
                   </div>
                 </div>
