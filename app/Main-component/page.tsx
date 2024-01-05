@@ -23,9 +23,9 @@ import {
 } from "react-bootstrap-icons";
 import { FaBell } from "react-icons/fa";
 import Link from "next/link";
-import Navigation from "../left-Navigation/page";
+import Navigation from "../Navigation/page";
 
-function Home() {
+function Main() {
   return (
     <>
       <div className="bg-black h-full flex justify-center items-center relative ">
@@ -112,4 +112,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Main;

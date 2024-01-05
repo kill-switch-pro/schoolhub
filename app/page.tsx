@@ -11,31 +11,6 @@ import Link from "next/link";
 export default function LandingPage() {
   return (
     <>
-      {/*
-    <div className="sign-up-modal card-body">
-        <h2>SIGN IN</h2>
-
-        <div>
-          COLLEGE EMAIL{" "}
-          <input className="sign-up" type="text" placeholder="email .edu " />
-        </div>
-
-        <Link href="homepage">
-          <button className="btn btn-primary">Login</button>
-        </Link>
-
-        <div>
-          <div>or</div>
-          <div>
-            no account ?
-            <Link href="login/signuppage" target="_blank">
-              <button className="btn btn-primary">signup</button>
-            </Link>
-          </div>
-          
-        </div>
-      </div> 
-      */}
       <div className="landing-page bg-primary">
         <div className="signup-page">
           <section className="vh-100">
